@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Vladulescu Stefan</title>
+</head>
+<body>
+    <div id="notifications">
+
+    </div>
+    <img src="./images/pfp.jpg" alt="" class="profile-picture">
+    <h1 class="full-name">Vladulescu Stefan</h1>
+    <div class="top-buttons">
+        <div class="top-button">
+            <button onclick="openModal('mail')">
+                <img src="images/mail.svg" alt="" class="social-icon">
+            </button>
+            <div class="modal" id="mail">
+                <p onclick="copyText('s.vladulescu@gmail.com')">s.vladulescu@gmail.com</p>
+                <img src="images/copy.svg" alt="" onclick="copyText('s.vladulescu@gmail.com')">
+                <button onclick="closeModal('mail')">Close</button>
+            </div>
+        </div>
+        <div class="top-button">
+            <button onclick="openModal('phone')">
+                <img src="images/phone.svg" alt="" class="social-icon">
+            </button>
+            <div class="modal" id="phone">
+                <p onclick="copyText('+40 724 473 060')">+40 724 473 060</p>
+                <img src="images/copy.svg" alt="" onclick="copyText('+40 724 473 060')">
+                <button onclick="closeModal('phone')">Close</button>
+            </div>
+        </div>
+        <div class="top-button">
+            <button onclick="openModal('share')">
+                <img src="images/share.svg" alt="" class="social-icon">
+            </button>
+            <div class="modal" id="share">
+                <p onclick="copyText('stefanvladulescu.com')">stefanvladulescu.com</p>
+                <img src="images/copy.svg" alt="" onclick="copyText('stefanvladulescu.com')">
+                <button onclick="closeModal('share')">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="socials">
+        <a href="https://www.instagram.com/stefan_0612/" target="_blank" class="social-button">
+            <img src="/images/instagram.svg" alt="" class="social-icon">
+            <p class="social-name">Instagram</p>
+        </a>
+        <a href="https://www.facebook.com/vladulescu.stefan.18" target="_blank" class="social-button">
+            <img src="images/facebook.svg" alt="" class="social-icon">
+            <p class="social-name">Facebook</p>
+        </a>
+        <a href="https://www.linkedin.com/in/stefan-vladulescu/" target="_blank" class="social-button">
+            <img src="images/linkedin.svg" alt="" class="social-icon">
+            <p class="social-name">LinkedIn</p>
+        </a>
+        <a href="https://stefan0712.github.io/portfolio/" target="_blank" class="social-button">
+            <img src="images/link.svg" alt="" class="social-icon">
+            <p class="social-name">Portfolio</p>
+        </a>
+        <a href="https://github.com/Stefan0712" target="_blank" class="social-button">
+            <img src="images/github.svg" alt="" class="social-icon">
+            <p class="social-name">Github</p>
+        </a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
