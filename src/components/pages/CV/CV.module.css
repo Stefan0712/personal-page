@@ -1,0 +1,135 @@
+.cv {
+    height: calc(100vh - 20px);
+    top: 10px;
+    right: 10px;
+    position: fixed;
+    width: fit-content;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 50px 50px 1fr 50px;
+    gap: 10px;
+    overflow: hidden;
+    animation: showCV 0.1s;
+    box-shadow: 1px 1px 5px black;
+    z-index: 15;
+}
+@media (max-width: 600px) {
+    .cv {
+        width: calc(100vw - 20px);
+    }
+    .cvDocument {
+        overflow: auto !important;
+    }
+    .cvDocument.showCV {
+        min-width: auto !important;
+        width: 100% !important;
+    }
+    .cvPage {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+}
+@keyframes showCV {
+    from {
+        right: -120%;
+        opacity: 0;
+    }
+    to {
+        right: 10px;
+        opacity: 1;
+    }
+}
+.cv .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cv .header button {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+.cv .switch {
+    width: 100%;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.cv .switch button {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    color: black;
+}
+.cv .switch button.selectedButton {
+    background-color: black;
+    color: white;
+}
+.buttonsContainer {
+    height: 40px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.buttonsContainer button,
+.buttonsContainer a {
+    height: 100%;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cv .container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    display: flex;
+    padding: 10px;
+}
+.cvDocument {
+    height: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 0px;
+    transition: all 0.1s;
+}
+.cvDocument.showCV {
+    min-width: 400px;
+    width: fit-content;
+    transition: all 0.1s;
+}
+.cvPage {
+    height: 100% !important;
+    max-height: 100% !important;
+    border-radius: 5px;
+}
+.cvPage canvas {
+    width: fit-content !important;
+    border-radius: 5px;
+}
