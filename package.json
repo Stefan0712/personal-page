@@ -2,7 +2,7 @@
   "name": "personal-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://stefan0712.github.io/personal-page",
+  "homepage": "https://stefanvladulescu.com",
   "dependencies": {
     "@formspree/react": "^3.0.0",
     "@testing-library/dom": "^10.4.1",
