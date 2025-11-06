@@ -27,13 +27,20 @@
 .header button:hover {
     transform: scale(1.1) translateX(-5px);
 }
+.secondRow {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
+    gap: 15px;
+}
 @media (max-width: 750px) {
     .about {
         display: flex !important;
         flex-direction: column;
         overflow-y: auto;
         padding: 10px 0;
-        padding-top: 70px;
     }
     .header {
         position: fixed;
@@ -48,7 +55,7 @@
         gap: 10px;
         height: fit-content;
     }
-    .bottomRow {
+    .secondRow {
         display: flex !important;
         flex-direction: column;
         gap: 10px;
@@ -59,34 +66,8 @@
         background-color: white;
         border-radius: 5px;
     }
-    .experience,
-    .courses {
-        height: auto !important;
-        background-color: transparent !important;
-        padding: 0 !important;
-    }
-    .experienceItem,
-    .courseItem {
-        background-color: white !important;
-        border: none !important;
-    }
-    .experience .cardContent,
-    .courses .cardContent{
-        height: fit-content;
-        padding-bottom: 0 !important;
-    }
-    .experienceHeader {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .module {
-        background-color: transparent !important;
-    }
 }
-.module {
-    background-color: rgba(255, 255, 255, 1);
-    border-radius: 10px;
-}
+
 .aboutMe, .education, .languages {
     width: 100%;
     padding: 10px;
@@ -94,6 +75,8 @@
     flex-direction: column;
     gap: 10px;
     height: 100%;
+    background-color: white;
+    border-radius: 5px;
 }
 .education .cardContent{
     display: flex;
@@ -227,4 +210,18 @@
 .courseItem ul li {
     list-style-type: none;
     padding: 0 5px;
+}
+
+
+.mySkills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.mySkills .category {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }

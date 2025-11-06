@@ -13,24 +13,28 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
-    animation: showContact 0.1s;
+    animation: showContact 0.5s;
     z-index: 10;
+    box-shadow: 1px 1px 5px black;
 }
 @media (max-width: 600px) {
     .contact {
-        width: calc(100vw - 20px);
-        min-width: auto;
-        right: 10px;
+        width: calc(100vw - 20px) !important;
+        min-width: auto !important;
+        right: 10px !important;
     }
 }
 @keyframes showContact {
-    from {
-        right: -120%;
+    0% {
+        bottom: -120%;
         opacity: 0;
     }
-    to {
-        right: 10px;
+    70% {
+        bottom: 30px;
         opacity: 1;
+    }
+    100% {
+        bottom: 10px;
     }
 }
 .contact .header {
@@ -61,6 +65,10 @@
     padding: 10px;
     border-radius: 10px;
     color: white;
+}
+.copyButton {
+    background-color: transparent;
+    border: none;
 }
 
 form {

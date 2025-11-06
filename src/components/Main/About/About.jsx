@@ -1,14 +1,13 @@
+import Certifications from '../../pages/components/Certifications/Certifications';
+import Experience from '../../pages/components/Experience/Experience';
+import Qna from '../../pages/components/Qna/Qna';
 import styles from './About.module.css';
-import { courses, experiences } from './data';
-
-
-
 const About = () => {
     return ( 
         <div className={styles.about}>
             <div className={`${styles.topRow} ${styles.module}`}>
                 <div className={`${styles.aboutMe}`}>
-                    <h4 className={styles.cardTitle}>About Me</h4>
+                    <h4 className={styles.cardTitle}>Skills</h4>
                     <div className={styles.cardContent}>
                         <p>
                             I like building projects, coding, and exploring how things work. Recently I've been getting into home-labbing with my EliteDesk, and I enjoy gaming. 
@@ -68,7 +67,12 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div className={styles.bottomRow}>
+            <div className={styles.secondRow}>
+                <Experience />
+                <Certifications />
+                <Qna />
+            </div>
+            {/* <div className={styles.bottomRow}>
                   <div className={`${styles.experience} ${styles.module}`}>
                     <h4 className={styles.cardTitle}>Work Experience</h4>
                     <div className={styles.cardContent}>
@@ -101,7 +105,7 @@ const About = () => {
                         </div>)}
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
      );
 }

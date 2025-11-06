@@ -12,7 +12,7 @@ import CopyModal from './Modals/CopyModal/CopyModal';
 import Contact from '../pages/Contact/Contact';
 import CV from '../pages/CV/CV';
 
-const Main = ({setShowComponent, showComponent}) => {
+const Main = ({setShowComponent, showComponent, copyText, showNotification}) => {
 
     const [showCopyModal, setShowCopyModal] = useState(null);
     const [showContactModal, setShowContactModal] = useState(false);
@@ -21,9 +21,9 @@ const Main = ({setShowComponent, showComponent}) => {
 
     return ( 
         <div className={`${styles.main} ${showComponent ? styles.componentShown : ''}`}>
-            {showCopyModal ? <CopyModal content={showCopyModal} close={()=>setShowCopyModal(null)}/> : null}
-            {showContactModal ? <Contact close={()=>setShowContactModal(false)} /> : null}
-            {showCV ? <CV close={()=>setShowCV(false)} /> : null}
+            {showCopyModal ? <CopyModal copyText={copyText} showNotification={showNotification} content={showCopyModal} close={()=>setShowCopyModal(null)}/> : null}
+            {showContactModal ? <Contact copyText={copyText} showNotification={showNotification} close={()=>setShowContactModal(false)} /> : null}
+            {showCV ? <CV close={()=>setShowCV(false)} showContact={()=>setShowContactModal(true)}/> : null}
             <img src={ProfilePicture} alt="" className={styles.profilePicture} />
             <h1 className={styles.fullName}> Vladulescu Stefan </h1>
 
@@ -33,12 +33,6 @@ const Main = ({setShowComponent, showComponent}) => {
                 </button>
             </div>
             <div className={styles.buttonsContainer}>
-                <button className={`${styles.socialButton} ${styles.secondaryShareButton}`} onClick={()=>setShowCopyModal('https://stefanvladulescu.com')}>
-                    <div className={styles.socialIcon}>
-                        <ShareIcon color='white'/>
-                    </div>
-                    <p className={styles.socialName}>Share</p>
-                </button>
                 <button className={styles.socialButton} onClick={()=>setShowComponent('about')}>
                     <div className={styles.socialIcon}>
                         <GithubIcon color='white'/>
@@ -57,30 +51,33 @@ const Main = ({setShowComponent, showComponent}) => {
                     </div>
                     <p className={styles.socialName}>Contact</p>
                 </button>
-                <a href="https://github.com/Stefan0712" target="_blank" className={styles.socialButton} rel='noreferrer'>
-                    <div className={styles.socialIcon}>
-                        <GithubIcon color='white'/>
-                    </div>
-                    <p className={styles.socialName}>Github</p>
-                </a>
-                <a href="https://www.instagram.com/stefan_0612/" target="_blank" className={styles.socialButton} rel='noreferrer'>
-                    <div className={styles.socialIcon}>
-                        <InstagramIcon color='white'/>
-                    </div>
-                    <p className={styles.socialName}>Instagram</p>
-                </a>
-                <a href="https://www.facebook.com/vladulescu.stefan.18" target="_blank" className={styles.socialButton} rel='noreferrer'>
-                    <div className={styles.socialIcon}>
-                        <FacebookIcon color='white'/>
-                    </div>
-                    <p className={styles.socialName}>Facebook</p>
-                </a>
-                <a href="https://www.linkedin.com/in/stefan-vladulescu/" target="_blank" className={styles.socialButton} rel='noreferrer'>
-                    <div className={styles.socialIcon}>
-                        <LinkedinIcon color='white'/>
-                    </div>
-                    <p className={styles.socialName}>LinkedIn</p>
-                </a>
+                
+                <div className={styles.socials}>
+                    <a href="https://github.com/Stefan0712" target="_blank" className={styles.socialButton} rel='noreferrer'>
+                        <div className={styles.socialIcon}>
+                            <GithubIcon color='white'/>
+                        </div>
+                        <p className={styles.socialName}>Github</p>
+                    </a>
+                    <a href="https://www.instagram.com/stefan_0612/" target="_blank" className={styles.socialButton} rel='noreferrer'>
+                        <div className={styles.socialIcon}>
+                            <InstagramIcon color='white'/>
+                        </div>
+                        <p className={styles.socialName}>Instagram</p>
+                    </a>
+                    <a href="https://www.facebook.com/vladulescu.stefan.18" target="_blank" className={styles.socialButton} rel='noreferrer'>
+                        <div className={styles.socialIcon}>
+                            <FacebookIcon color='white'/>
+                        </div>
+                        <p className={styles.socialName}>Facebook</p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/stefan-vladulescu/" target="_blank" className={styles.socialButton} rel='noreferrer'>
+                        <div className={styles.socialIcon}>
+                            <LinkedinIcon color='white'/>
+                        </div>
+                        <p className={styles.socialName}>LinkedIn</p>
+                    </a>
+                </div>
             </div>
             <button className={styles.cvButton} onClick={()=>setShowCV(prev=>!prev)}>See my CV</button>
         </div>
