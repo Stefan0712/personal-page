@@ -4,7 +4,7 @@ import svgr from 'vite-plugin-svgr'
 
 export default defineConfig({
   plugins: [react(), svgr()],
-  base: "personal-page",
+  base: "/personal-page/",
   server: {
     port: 3000,
     strictPort: true,
