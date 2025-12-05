@@ -1,0 +1,121 @@
+.updates {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.updatesContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+@media (max-width: 700px) {
+    .updatesContainer {
+        display: flex !important;
+        flex-direction: column;
+    }
+    .update {
+        height: fit-content !important;
+    }
+}
+
+.update {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    border: 1px solid var(--item-border);
+}
+.updateHeader {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #0e162a;
+    padding: 0 20px;
+}
+.updateHeader svg {
+    height: 20px;
+    width: 20px;
+    color: var(--accent);
+}
+.updateHeader h3 {
+    color: var(--text-color);
+}
+.updateHeader p {
+    margin-left: auto;
+    color: #4d596d;
+    background-color: #1c283d;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+.commits {
+    display: flex;
+    flex-direction: column;
+    background-color: #060e20;
+    min-height: 30px;
+    padding: 10px;
+    gap: 10px;
+}
+.loadingError {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    gap: 10px;
+}
+.loadingError b {
+    color: var(--accent);
+}
+.commit {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+.commit:hover{
+    transform: translateY(0);
+}
+.commit .top{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20px 1fr;
+    gap: 10px;
+}
+.commitMessage {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.commit .top svg {
+    height: 20px;
+    width: 20px;
+    color: rgba(255, 255, 255, 0.4);
+}
+.commitMeta {
+    width: 100%;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.commitMeta svg {
+    height: 15px;
+    width: 15px;
+    color: var(--text-color);
+    opacity: 0.5;
+}
+.commitMeta p {
+    color: var(--text-color);
+    opacity: 0.5;
+}

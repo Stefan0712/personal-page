@@ -1,0 +1,119 @@
+.contact {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--text-color);
+    padding-top: 50px;
+}
+.contactContent {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+@media (max-width: 700px) {
+    .contactContent {
+        display: flex !important;
+        flex-direction: column;
+        height: fit-content !important;
+    }
+    .contact {
+        min-height: 0;
+    }
+    .contactInfo,
+    .contactForm {
+        height: fit-content !important;
+    }
+}
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+}
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+.contactIcon {
+    height: 50px;
+    width: 50px;
+    background-color: #0f1829;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contactIcon svg {
+    height: 70%;
+    width: 70%;
+    color: var(--accent);
+}
+
+
+.contactForm {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--text-color);
+}
+.contactForm fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: none;
+    width: 100%;
+}
+.contactForm input,
+.contactForm textarea {
+    height: 50px;
+    width: 100%;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #21283b;
+    color: var(--text-color);
+    background-color: #0e162a;
+}
+.contactForm textarea{
+    height: 100px;
+    padding-top: 10px;
+}
+.contactForm button {
+    height: 50px;
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--text-on-accent);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    gap: 10px;
+}
+.contactForm button svg {
+    height: 20px;
+    width: 20px;
+    color: var(--text-on-accent) !important;
+}
+.contactForm button:hover{
+    color: var(--text-on-accent) !important;
+    transform: scale(101%) !important;
+    border: 1px solid white !important;
+}
+.successMessage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

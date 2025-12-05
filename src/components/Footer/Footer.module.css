@@ -1,0 +1,53 @@
+.footer {
+    height: 100px;
+    border-top: 1px solid var(--border);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--text-color);
+    opacity: 0.5;
+    margin-top: 50px;
+}
+.footer p {
+    width: 100%;
+    text-align: center;
+}
+
+.contactButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    width: 100%;
+}
+.contactButtons button,
+.contactButtons a {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.contactButtons button svg,
+.contactButtons a svg {
+    height: 30px;
+    width: 30px;
+    color: var(--text-color);
+}
+
+button:hover,
+a:hover{
+    color: var(--accent);
+    fill: var(--accent);
+    transition: all 0.1s;
+    transform: translateY(-5px)
+}
+button,
+a{ 
+    transition: all 0.1s;
+}

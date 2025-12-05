@@ -1,0 +1,263 @@
+.viewProject {
+    width: 30dvw;
+    min-width: 500px;
+    height: calc(100dvh - 20px);
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    background-color: var(--item-background);
+    border: 1px solid var(--item-border);
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    z-index: 100;
+    color: var(--text-color);
+    overflow: hidden;
+    animation: openViewProject 0.2s;
+}
+@keyframes openViewProject {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@media (max-width: 700px){
+    .viewProject {
+        width: calc(100dvw - 20px);
+        min-width: 0;
+    }
+}
+.projectHeader {
+    width: 100%;
+    height: 50px;
+    align-items: start;
+    display: grid;
+    grid-template-columns: 1fr minmax(30px, 70px);
+}
+.projectButtons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+.projectButtons svg {
+    height: 30px;
+    width: 30px;
+    color: var(--text-color);
+}
+.projectDescription p {
+    opacity: 0.5;
+}
+.tech {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+.tech p {
+    opacity: 1;
+    background-color: #1a2b3f;
+    color: var(--text-on-accent);
+    padding: 0 10px;
+    font-size: 0.75rem;
+    border-radius: 5px;
+}
+.moreInfo {
+    padding: 20px 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    scrollbar-width: thin; 
+    scrollbar-color: var(--accent, #6366f1) transparent; 
+    padding-right: 15px;
+}
+.moreInfo::-webkit-scrollbar {
+  width: 6px;
+}
+.moreInfo::-webkit-scrollbar-track {
+  background: transparent;
+  margin-block: 4px;
+}
+.moreInfo::-webkit-scrollbar-thumb {
+  background-color: rgba(99, 102, 241, 0.5);
+  border-radius: 100vw;
+  border: 2px solid transparent; 
+  background-clip: content-box;
+}
+.moreInfo::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-purple, #6366f1); 
+}
+.moreInfo::-webkit-scrollbar-button {
+  display: none;
+}
+.projectFunctionality {
+    display: flex;
+    flex-direction: column;
+}
+.projectFunctionality .listTitle {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 10px;
+    align-items: center;
+    margin: 10px 0;
+}
+.projectFunctionality .listTitle svg {
+    height: 20px;
+    width: 20px;
+    color: var(--accent);
+}
+.projectFunctionality ul {
+    list-style-type: disc;
+    padding-left: 30px;
+}
+.projectFunctionality li {
+    list-style-type: disc;
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+.closeButton {
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--accent);
+    border: none;
+    color: var(--text-on-accent) !important;
+    font-size: 1.2rem;
+}
+.closeButton:hover {
+    color: var(--text-on-accent) !important;
+}
+
+.projectButtons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 40px;
+    margin-top:25px;
+}
+.projectButtons a {
+    height: 100%;
+    flex-grow: 1;
+    border: 1px solid var(--accent);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+
+
+.update {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    border: 1px solid var(--item-border);
+}
+.updateHeader {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #0e162a;
+    padding: 0 20px;
+}
+.updateHeader svg {
+    height: 20px;
+    width: 20px;
+    color: var(--accent);
+}
+.updateHeader h3 {
+    color: var(--text-color);
+}
+.updateHeader p {
+    margin-left: auto;
+    color: #4d596d;
+    background-color: #1c283d;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+.commits {
+    display: flex;
+    flex-direction: column;
+    background-color: #060e20;
+    min-height: 30px;
+    padding: 10px;
+    gap: 10px;
+}
+.loadingError {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    gap: 10px;
+}
+.loadingError b {
+    color: var(--accent);
+}
+.commit {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+.commit:hover{
+    transform: translateY(0);
+}
+.commit .top{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20px 1fr;
+    gap: 10px;
+}
+.commitMessage {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.commit .top svg {
+    height: 20px;
+    width: 20px;
+    color: rgba(255, 255, 255, 0.4);
+}
+.commitMeta {
+    width: 100%;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.commitMeta svg {
+    height: 15px;
+    width: 15px;
+    color: var(--text-color);
+    opacity: 0.5;
+}
+.commitMeta p {
+    color: var(--text-color);
+    opacity: 0.5;
+}

@@ -1,0 +1,76 @@
+.education {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.educationContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    color: var(--text-color);
+}
+.categoryTitle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.categoryTitle svg {
+    height: 26px;
+    width: 26px;
+    color: var(--accent);
+}
+.school {
+    width: 100%;
+    background-color: #040a1f;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #21283b;
+}
+.formalEducation,
+.courses {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.school b {
+    color: var(--accent);
+}
+.school p {
+   opacity: 0.5;
+}
+.courseDot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background-color: var(--accent);
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+.course {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    background-color: var(--item-background);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 15px;
+    border: 1px solid #21283b;
+    height: auto;
+}
+.course p {
+   flex-shrink: 1;
+}
+@media (max-width: 700px) {
+    .educationContent {
+        display: flex !important;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

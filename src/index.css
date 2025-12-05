@@ -1,0 +1,11 @@
+:root {
+    --primary-background: #030619;
+    --item-background: #040a1f;
+    --item-border: #21283b;
+    --text-color: rgb(217, 217, 217);
+    --accent:  #6366f1;
+    --border: #b5b5b543;
+    --text-on-accent: white;
+    --muted-text: rgba(255, 255, 255, 0.7);
+}
+/* Accent variations: #6366f1 #8b5cf6 */
