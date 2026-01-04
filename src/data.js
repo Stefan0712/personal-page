@@ -93,33 +93,36 @@ export const projects = [
     },
     {
         id: 2,
-        title: "Shopping List App",
+        title: "Acta",
         repoName: 'Docket',
         imgSrc: Docket,
-        description: "The only tool needed for you shopping. It is fast, simple, while letting you organize your items. Collaborate through groups and manage lists together. Easiest way to keep your family or friends updated",
+        description: "Collaborate on lists with friends or family, decide easily through a poll, and leave useful notes. Acta is the app for quick and easy collaboration, or just create private offline-only lists.",
         tech: ["React.Js", "Dexie", "TypeScript"],
         links: {
-            repo: "https://github.com/Stefan0712/docket",
-            demo: "https://stefan0712.github.io/docket/"
+            repo: "https://github.com/Stefan0712/acta",
+            demo: "https://stefan0712.github.io/acta/"
         },
         completed: [
-            'Create, View, Edit, and Delete shopping lists',
-            'Create Shopping List items',
-            'Add a store and a category to list items',
-            'Add custom tags to items',
-            'Set item priority and pin it',
-            'Create groups locally',
-            'Assign or claim an item',
+            'CRUD lists and list items',
+            'CRUD groups',
+            'Custom tags',
+            'Color and Icon picker for groups and lists',
+            'Set deadlines, qty, values, priority and tags to items for flexibility',
+            'Assign items to a group member or claim for yourself',
+            'Generate invite links for groups',
+            'Login or create a new account',
+            'CRUD for notes and note comments in groups',
+            'CRUD for polls in groups',
+            'Import and export data'
         ],
         inProgress: [
             'Notification system for the user',
-            'Activity system for groups where all actions will be shown',
+            'Moderation tools for groups',
+            'Back-ups',
         ],
         planned: [
-            'Group notes',
-            'Group polls',
-            'Import and export data',
-            'Auth and cloud backup',
+            'Data caching to allow offline viewing of group items',
+            'Layout for bigger screens',
         ]
     },
     {
