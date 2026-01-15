@@ -40,7 +40,7 @@ const Hero = () => {
                         View Projects
                         <Arrow />
                     </button>
-                    <a href='https://drive.google.com/file/d/1fmHQqkW7ybDg6cA6xhC3w28_-0bPSnQB/view?usp=sharing' target='_blank' className={styles.downloadCv}>
+                    <a href='https://drive.google.com/file/d/12453-wJ5bQHB8jpV848Gd-FwmANlQuAS/view?usp=sharing' target='_blank' className={styles.downloadCv}>
                         Download CV
                         <Download />
                     </a>
