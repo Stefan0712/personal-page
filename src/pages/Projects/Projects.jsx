@@ -1,8 +1,8 @@
 import styles from './Projects.module.css';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
-import Folder from '../../assets/folder.svg?react';
 import Github from '../../assets/github.svg?react';
 import Link from '../../assets/link.svg?react';
+import Info from '../../assets/info.svg?react';
 import { projects } from '../../data';
 import { useState } from 'react';
 import ViewProject from '../../components/ViewProject/ViewProject';
@@ -41,17 +41,28 @@ const Project = ({project, selectProject}) => {
     return (        
         <motion.div 
             className={styles.project} 
-            onClick={()=>selectProject(project)}
             variants={slideUp}
             initial="hidden"
             whileInView="visible"
             viewport={{once: true}}
         >
-            <div className={styles.thumbnailContainer}>
-                <img src={project.imgSrc} alt={project.title} />
+            <div className={styles.projectHeader}>
+                <img src={project.logoUrl} alt={project.title} className={styles.projectLogo}/>
+                <h3>{project.title}</h3>
+                <button onClick={()=>selectProject(project)} className={styles.detailsButton}><Info /></button>
             </div>
-            <h3>{project.title}</h3>
             <p>{project.description}</p>
+            <div className={styles.techStack}>
+                {project.tech.map(item=><p key={item}>{item}</p>)}
+            </div>
+            <div className={styles.projectButtons}>
+                <a href={project.links.repo} target='_blank' className={styles.repoButton}>
+                    <Github /> Repository
+                </a>
+                <a href={project.links.demo} target='_blank' className={styles.demoButton}>
+                    <Link /> Live Demo
+                </a>
+            </div>
         </motion.div>
     )
 }

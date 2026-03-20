@@ -7,8 +7,9 @@
 }
 .projectsContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
+    box-sizing: border-box;
 }
 .project {
     width: 100%;
@@ -21,31 +22,103 @@
     color: var(--text-color);
     border-radius: 10px;
     transition: all 0.1s;
-    cursor: pointer;
     overflow: hidden;
+    padding: 20px;
+    position: relative;
+}
+.projectHeader {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+.projectLogo {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
 }
 .project:hover {
     border-color: var(--accent);
     transform: translateY(-5px) scale(101%) !important;
     transition: all 0.1s;
 }
-.project .thumbnailContainer {
+.project p {
+    opacity: 0.5;
+}
+.techStack {
     width: 100%;
     display: flex;
     align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.techStack p {
+    background-color: var(--item-border);
+    opacity: 1;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.projectButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    margin-top: auto;
+}
+.projectButtons a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
     justify-content: center;
-}
-.project .thumbnailContainer img {
+    height: 50px;
     width: 100%;
+    font-size: 12px;
 }
-.project p {
-    opacity: 0.5;
-    padding: 0 20px 20px 20px;
+.projectButtons a svg {
+    height: 20px;
+    width: 20px;
+    color: white;
+}
+.detailsButton {
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.detailsButton svg {
+    height: 20px;
+    width: 20px;
+}
+.detailsButton:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.detailsButton:hover svg {
+    color: var(--accent);
 }
 
-.project h3 {
-    padding: 0 20px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 700px){
     .projectsContainer {
         display: flex !important;

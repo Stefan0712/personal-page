@@ -7,6 +7,9 @@ import Checkmark from '../../assets/checkmark.svg?react';
 import Wrench from '../../assets/wrench.svg?react'; 
 import Bulb from '../../assets/bulb.svg?react'; 
 import Link from '../../assets/link.svg?react'; 
+import RightArrow from '../../assets/right-arrow.svg?react'; 
+import LeftArrow from '../../assets/left-arrow.svg?react'; 
+import Close from '../../assets/close.svg?react'; 
 
 
 import { useEffect, useState } from 'react';
@@ -18,8 +21,11 @@ const ViewProject = ({project, close}) => {
             <div className={styles.projectDescription}>
                 <div className={styles.projectHeader}>
                     <h3>{project.title}</h3>
+                    <button className={styles.closeButton} onClick={close}><Close /></button>
                 </div>
-                <p>{project.description}</p>
+            </div>
+            <div className={styles.moreInfo}>
+                <p>{project.longDescription ?? project.description}</p>
                 <div className={styles.tech}>
                     {project.tech.length > 0 ? project.tech.map(item=><p key={item}>{item}</p>) : null}
                 </div>
@@ -27,8 +33,6 @@ const ViewProject = ({project, close}) => {
                     {project.links.repo ? <a className={styles.repoLink} href={project.links.repo} target='_blank'><Github /> Repository</a> : null}
                     {project.links.demo ? <a className={styles.demoLink} href={project.links.demo} target='_blank'><Link /> Live</a> : null}
                 </div>
-            </div>
-            <div className={styles.moreInfo}>
                 <div className={styles.projectFunctionality}>
                     {project.completed && project.completed.length > 0 ? <div className={styles.listTitle}>
                         <Checkmark />
@@ -52,11 +56,12 @@ const ViewProject = ({project, close}) => {
                         {project?.planned?.map(i=><li>{i}</li>)}
                     </ul>
                 </div>
+                <h3>Gallery</h3>
+                {project.gallery && project.gallery.length > 0 ? <Gallery images={project.gallery} /> : <p>No images to show</p>}
                 <div className={styles.projectUpdates}>
                     <Update projectData={project} />
                 </div>
             </div>
-            <button className={styles.closeButton} onClick={close}>Close</button>
         </div>
     )
 }
@@ -117,6 +122,32 @@ const Update = ({projectData}) => {
                     </div>
                 </a>) : <p className={styles.loadingError}>Failed to load commits. <b onClick={fetchCommits}>Press to try again</b></p>}
             </div>
+        </div>
+    )
+}
+
+const Gallery = ({images}) => {
+    
+    const [selectedImage, setSelectedImage] = useState(0);
+
+    const handleNext = () => {
+        if(images.length - 1 > selectedImage){
+            setSelectedImage(prev=>prev+1)
+        }
+    }
+    const handlePrev = () => {
+        if(selectedImage > 0){
+            setSelectedImage(prev=>prev-1)
+        }
+    }
+
+    return (
+        <div className={styles.gallery}>
+            <button onClick={handlePrev}><LeftArrow /></button>
+            <div className={styles.imageContainer}>
+                <img src={images[selectedImage]} alt='' />
+            </div>
+            <button onClick={handleNext}><RightArrow /></button>
         </div>
     )
 }
