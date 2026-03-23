@@ -1,8 +1,3 @@
-import Easyfit from './assets/easyfit.png';
-import Docket from './assets/docket.png';
-import Pomodoro from './assets/get-it-done.png';
-
-
 export const personalInfo = {
     email: "s.vladulescu@gmail.com",
     phone: "+40 724 473 060",
@@ -268,7 +263,7 @@ export const projects = [
     },
     {
         id: 6,
-        title: "Personal Cloud & Homelab Infrastructure",
+        title: "Homelab",
         repoName: 'home-lab',
         logoUrl: 'https://github.com/Stefan0712/arc/blob/main/public/512x512.png?raw=true',
         description: "Self-hosted server environment running 15+ containerized microservices, featuring custom DNS routing, VPN access, and active system telemetry",

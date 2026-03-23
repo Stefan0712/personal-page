@@ -2,6 +2,7 @@ import styles from './Projects.module.css';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import Github from '../../assets/github.svg?react';
 import Link from '../../assets/link.svg?react';
+import Server from '../../assets/server.svg';
 import Info from '../../assets/info.svg?react';
 import { projects } from '../../data';
 import { useState } from 'react';
@@ -47,7 +48,7 @@ const Project = ({project, selectProject}) => {
             viewport={{once: true}}
         >
             <div className={styles.projectHeader}>
-                <img src={project.logoUrl} alt={project.title} className={styles.projectLogo}/>
+                {project.id === 6 ? <div className={projectIconContainer}><img src={Server} alt={project.title} className={styles.projectLogo}/></div> : <img src={project.logoUrl} alt={project.title} className={styles.projectLogo}/>}
                 <h3>{project.title}</h3>
                 <button onClick={()=>selectProject(project)} className={styles.detailsButton}><Info /></button>
             </div>
