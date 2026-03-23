@@ -10,7 +10,7 @@ export const experience = [
         id: 1,
         role: "Sales Assistant",
         company: "Altex",
-        period: "05/2025 - Present",
+        period: "05/2025 - 10/2025",
         description: "Consulted customers on technical hardware specifications and managed high-volume inventory logistics.",
     },
     {
@@ -308,23 +308,26 @@ export const skills = {
     "WordPress",
     "Node.Js",
     "Bootstrap",
-    "IndexedDB",
+    "IndexedDB/Dexie",
     "ReactRouter",
     "TypeScript",
     "Express.Js",
     "MongoDB",
-    "Redux"
+    "Redux/Zustand",
+    "Framer Motion",
+    "PWA"
   ],
   tech: [
     "Git & GitHub",
-    "Linux (Home Lab)",
+    "Linux / Server Administration (Home Lab)",
     "Bash / Terminal",
     "Python (Basics)",
     "Web Security Awareness",
     "Microsoft PL-900",
     "SQL (Basics)",
-    "Networking Basics",
-    "REST API"
+    "DNS & Reverse Proxies",
+    "REST API",
+    "Docker & Containerization"
 
   ],
   creative: [
@@ -344,10 +347,8 @@ export const skills = {
     "SEO Basics",
     "Digital Marketing",
     "Adaptability",
-    "Microsoft Office",
     "Attention to Detail",
     "Email Marketing",
     "Teamwork",
-    "Computer Literacy",
   ]
 };

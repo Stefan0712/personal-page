@@ -43,7 +43,7 @@ const About = () => {
                         <img src={Pfp} alt='Profile Picture' className={styles.profilePicture}/>
                         <div className={styles.infoBlock}>
                             <h3>Personal Information</h3>
-                            <p><b>Location:</b> Germany</p>
+                            <p><b>Location:</b> Romania</p>
                             <p><b>Email:</b> s.vladulescu@gmail.com</p>
                             <p><a href={personalInfo.github} target='_blank'><img src={GithubIcon} alt='github icon'/> Github Profile</a></p>
                             <p><a href={personalInfo.linkedin} target='_blank'><img src={LinkedinIcon} alt='github icon'/> LinkedIn Profile</a></p>
@@ -74,9 +74,12 @@ const About = () => {
                         </div>
                     </div>
                     <p className={styles.bio}>
-                        I'm a Software Developer based in Germany who enjoys building tools that actually help people—starting with myself. That's the drive behind projects like Acta and EasyFit: I wanted practical, offline-first apps that just work, so I built them.
-                        My main focus is the React ecosystem (TypeScript, Node.js), but I don't like 'black boxes.' I spend my free time tinkering with my self-hosted Linux home lab, learning how infrastructure works by getting my hands dirty with Docker and networking.
-                        With a background in customer service, I know that clear communication is just as important as clean code. I bring a positive, organized approach to solving problems, whether I'm debugging a server or coordinating with a team                    </p>
+                        I'm a full-stack developer who learns by doing. I write software mostly because I want to use it, projects like my offline-first tracker EasyFit or Acta exist because I needed them, and building them from scratch was the best way to improve up my skills.
+
+                        I spend most of my time in the React and Node.js ecosystem, but I like knowing exactly what happens after my code is pushed. That curiosity led me to build my own Linux homelab, where I spend my free time deploying containers, managing reverse proxies, and learning infrastructure the hard way: by breaking it and fixing it.
+
+                        I have a past life in customer service, which taught me that clear communication and user experience matter just as much as the tech stack. I'm just a curious dev who likes solving real problems and building things that actually work.
+                    </p>
                 </motion.div>
                     <motion.div 
                         className={styles.skills}
