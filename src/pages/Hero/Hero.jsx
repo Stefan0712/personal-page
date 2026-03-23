@@ -34,7 +34,7 @@ const Hero = () => {
                 <motion.h3 variants={itemVariants} className={styles.accentText}>Hello, I'm</motion.h3>
                 <motion.h1 variants={itemVariants}>Ștefan Vlădulescu</motion.h1>
                 <motion.h2 variants={itemVariants}>Full Stack Developer</motion.h2>
-                <motion.p variants={itemVariants}>I like to build solutions for real problems. No vibe-coding, but passions-coding. I put my heart into projects that have meaning.</motion.p>
+                <motion.p variants={itemVariants}>A self-taught developer building practical tools that fix real-world problems. Learning by doing, figuring things out as I build.</motion.p>
                 <motion.div variants={itemVariants} className={styles.buttons}>
                     <button className={styles.viewProjects} onClick={()=>document.getElementById('projects')?.scrollIntoView({behavior: 'smooth'})}>
                         View Projects
