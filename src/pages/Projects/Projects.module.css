@@ -58,6 +58,7 @@
     opacity: 1;
     padding: 5px 10px;
     border-radius: 10px;
+    font-size: 0.7rem
 }
 .projectButtons {
     display: grid;

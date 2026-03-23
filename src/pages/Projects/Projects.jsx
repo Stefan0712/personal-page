@@ -48,7 +48,7 @@ const Project = ({project, selectProject}) => {
             viewport={{once: true}}
         >
             <div className={styles.projectHeader}>
-                {project.id === 6 ? <div className={projectIconContainer}><img src={Server} alt={project.title} className={styles.projectLogo}/></div> : <img src={project.logoUrl} alt={project.title} className={styles.projectLogo}/>}
+                <img src={project.logoUrl ?? Server} alt={project.title} className={styles.projectLogo}/>
                 <h3>{project.title}</h3>
                 <button onClick={()=>selectProject(project)} className={styles.detailsButton}><Info /></button>
             </div>
@@ -56,14 +56,14 @@ const Project = ({project, selectProject}) => {
             <div className={styles.techStack}>
                 {project.tech.map(item=><p key={item}>{item}</p>)}
             </div>
-            <div className={styles.projectButtons}>
+            {project.links ? <div className={styles.projectButtons}>
                 <a href={project.links.repo} target='_blank' className={styles.repoButton}>
                     <Github /> Repository
                 </a>
                 <a href={project.links.demo} target='_blank' className={styles.demoButton}>
                     <Link /> Live Demo
                 </a>
-            </div>
+            </div> : null}
         </motion.div>
     )
 }

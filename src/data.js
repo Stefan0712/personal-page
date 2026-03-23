@@ -59,35 +59,6 @@ export const certifications = [
 
 export const projects = [
     {
-        id: 1,
-        title: "Fitness App",
-        repoName: 'fitness-app',
-        logoUrl: 'https://github.com/Stefan0712/fitness-app/blob/main/public/icons/icon-512x512.png?raw=true',
-        description: "A personal fitness tracking web app that let users manage and do exercises and workouts, and that helps users log workouts, monitor goals, and track their progress through an interactive dashboard.",
-        longDescription: 'EasyFit is a comprehensive, local-first fitness and nutrition tracking application built with React, TypeScript, Redux, and IndexedDB. Designed as a performant alternative to subscription-based trackers, it features a complex workout builder supporting multi-phase routines, dynamic exercise libraries, and highly customizable goal tracking parameters',
-        tech: ["React.js", "TypeScript", "Redux", "React Router", "CSS", "IndexedDB"],
-        links: {
-            demo: "https://stefan0712.github.io/fitness-app",
-            repo: "https://github.com/Stefan0712/fitness-app", 
-        },
-        completed: [
-            'Create, View, Edit, and Delete exercises',
-            'CRUD for workouts',
-            'Completed workouts and exercises are being logged automatically',
-            'Create and log different types of custom goals',
-            'Log food and other activities',
-            'Customizable dashboard with your selected goals, and nutrition and activity summaries',
-            'Guided exercises and workouts',
-            'Import and export workouts and exercises',
-        ],
-        inProgress: [
-            'Rework on some components UI',
-        ],
-        planned: [
-            'Create a larger library of already curated exercises and workouts'
-        ]
-    },
-    {
         id: 2,
         title: "Acta",
         repoName: 'Acta',
@@ -264,15 +235,10 @@ export const projects = [
     {
         id: 6,
         title: "Homelab",
-        repoName: 'home-lab',
-        logoUrl: 'https://github.com/Stefan0712/arc/blob/main/public/512x512.png?raw=true',
+        logoUrl: null,
         description: "Self-hosted server environment running 15+ containerized microservices, featuring custom DNS routing, VPN access, and active system telemetry",
         longDescription: "An Ubuntu home server running over 15 Docker containers managed via Dockge. It hosts a Nextcloud personal cloud with a MariaDB database, dedicated game servers, and AdGuard Home for network-wide ad blocking. Public web traffic is routed through Cloudflare and a Caddy reverse proxy, while WireGuard provides a secure VPN connection to the local network. Uptime and system health are monitored in real-time using Uptime Kuma and Beszel.",
         tech: ["React.js", "TypeScript", "React Router", "TailwindCSS", "Zustand", "Framer Motion", "Dexie", "Lucide Icons", "PWA"],
-        links: {
-            repo: "#",
-            demo: "#"
-        },
         gallery: [
             '/projects/homelab/lab-diagram.png'
         ],
@@ -295,6 +261,37 @@ export const projects = [
             "3D Models Library (custom API & UI)",
             "Homepage",
             "Terraria Dedicated Server"
+        ]
+    },
+     {
+        id: 1,
+        title: "Fitness App",
+        repoName: 'fitness-app',
+        logoUrl: 'https://github.com/Stefan0712/fitness-app/blob/main/public/icons/icon-512x512.png?raw=true',
+        description: "[REWORKING THE WHOLE APP] A personal fitness tracking web app that let users manage and do exercises and workouts, and that helps users log workouts, monitor goals, and track their progress through an interactive dashboard.",
+        longDescription: 'EasyFit is a comprehensive, local-first fitness and nutrition tracking application built with React, TypeScript, Redux, and IndexedDB. Designed as a performant alternative to subscription-based trackers, it features a complex workout builder supporting multi-phase routines, dynamic exercise libraries, and highly customizable goal tracking parameters',
+        tech: ["React.js", "TypeScript", "Redux", "React Router", "CSS", "IndexedDB"],
+        links: {
+            demo: "https://stefan0712.github.io/fitness-app",
+            repo: "https://github.com/Stefan0712/fitness-app", 
+        },
+        completed: [
+            'Create, View, Edit, and Delete exercises',
+            'CRUD for workouts',
+            'Completed workouts and exercises are being logged automatically',
+            'Create and log different types of custom goals',
+            'Log food and other activities',
+            'Customizable dashboard with your selected goals, and nutrition and activity summaries',
+            'Guided exercises and workouts',
+            'Import and export workouts and exercises',
+        ],
+        inProgress: [
+            'Rework the entire UI',
+            'Migrate to using more TypeScript',
+            'Adding TailwindCSS alongside custom CSS'
+        ],
+        planned: [
+            'Create a larger library of already curated exercises and workouts'
         ]
     },
 ];
