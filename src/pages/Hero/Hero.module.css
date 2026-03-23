@@ -38,6 +38,7 @@
     justify-content: center;
     font-size: 1.25rem;
     text-decoration: none;
+    cursor: pointer;
 }
 .hero .buttons button:hover,
 .hero .buttons a:hover {

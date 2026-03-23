@@ -65,7 +65,7 @@ export const projects = [
         logoUrl: 'https://github.com/Stefan0712/acta/blob/main/public/logo512.png?raw=true',
         description: "Collaborate on lists with friends or family, decide easily through a poll, and leave useful notes. Acta is the app for quick and easy collaboration, or just create private offline-only lists.",
         longDescription: 'Acta is a full-stack, local-first productivity engine built with React 19, Node.js, and MongoDB to handle both offline task management and real-time group collaboration. It features a custom synchronization engine bridging local Dexie.js storage with an Express REST API, utilizing optimistic UI reactivity, background push queues, and periodic polling to ensure zero-latency data interactions. The platform supports shared workspaces with granular role-based access control, intelligent task delegation, and collaborative decision tools. Active development is focused on implementing advanced delta-syncing algorithms for robust offline conflict resolution and PWA service workers for native notifications',
-        tech: ["React.Js", "Dexie", "TypeScript", "Mongodb", "Node'.JS", "Typescript", "React Router", "Lucide Icons"],
+        tech: ["React.Js", "Dexie", "TypeScript", "Mongodb", "Node.JS", "React Router", "Lucide Icons"],
         links: {
             repo: "https://github.com/Stefan0712/acta",
             demo: "https://stefan0712.github.io/acta/"
@@ -120,7 +120,7 @@ export const projects = [
         logoUrl: 'https://github.com/Stefan0712/focus/blob/main/public/web-app-manifest-512x512.png?raw=true',
         description: "This pomodoro timer with build-in task manager was made to boost my own productivity by removing all the friction of other apps and helping me focus on doing the tasks, not planning.",
         longDescription: 'Focus is a local-first Progressive Web App (PWA) that combines a highly customizable Pomodoro timer with an integrated task manager. Built with React, Redux Toolkit, and Dexie.js, the application leverages useLiveQuery for zero-latency database sorting and robust offline data persistence. Engineered for deep work, it features dynamic split-screen layouts, a distraction-free Zen mode, and native browser Wake Lock API integration to prevent device sleep during active focus sessions',
-        tech: ["React.js", "TypeScript", "Redux", "Dexie", "VITE", "PWA", "Vite"],
+        tech: ["React.js", "TypeScript", "Redux", "Dexie", "PWA", "Vite"],
         links: {
             repo: "https://github.com/Stefan0712/focus",
             demo: "https://stefan0712.github.io/focus/"
