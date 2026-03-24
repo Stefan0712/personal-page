@@ -238,7 +238,7 @@ export const projects = [
         logoUrl: null,
         description: "Self-hosted server environment running 15+ containerized microservices, featuring custom DNS routing, VPN access, and active system telemetry",
         longDescription: "An Ubuntu home server running over 15 Docker containers managed via Dockge. It hosts a Nextcloud personal cloud with a MariaDB database, dedicated game servers, and AdGuard Home for network-wide ad blocking. Public web traffic is routed through Cloudflare and a Caddy reverse proxy, while WireGuard provides a secure VPN connection to the local network. Uptime and system health are monitored in real-time using Uptime Kuma and Beszel.",
-        tech: ["React.js", "TypeScript", "React Router", "TailwindCSS", "Zustand", "Framer Motion", "Dexie", "Lucide Icons", "PWA"],
+        tech: ["Ubuntu Server", "Docker Compose", "Bash", "Caddy", "WireGuard", "Uptime Kuma"],
         gallery: [
             '/projects/homelab/lab-diagram.png'
         ],
