@@ -8,11 +8,13 @@ import Contact from './pages/Contact/Contact';
 import Navigation from './components/Navigation';
 import Updates from './pages/Updates/Updates';
 import Footer from './components/Footer/Footer';
+import AnimatedBackground from './components/AnimatedBackground/AnimatedBackground';
 
 function App() {
 
   return (
     <div className='App'>
+      <AnimatedBackground />
       <Navigation />
       <div className='main-page'>
         <Hero />

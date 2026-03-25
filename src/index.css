@@ -4,6 +4,8 @@
     --item-border: #21283b;
     --text-color: rgb(217, 217, 217);
     --accent:  #6366f1;
+    --accent-secondary: #a855f7;
+    --accent-tertiary: #06b6d4;
     --border: #b5b5b543;
     --text-on-accent: white;
     --muted-text: rgba(255, 255, 255, 0.7);

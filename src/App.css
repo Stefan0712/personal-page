@@ -9,7 +9,6 @@
 .App {
   height: 100dvh;
   width: 100dvw;
-  background-color: var(--primary-background);
   overflow: hidden;
   display: grid;
   grid-template-rows: 75px 1fr;
